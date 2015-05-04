@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6751" systemVersion="13E28" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--空气质量-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="空气质量" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchWeather_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="center" text="北京" id="r6i-N1-2vc">
+                            <fontDescription key="font" type="system" pointSize="30"/>
+                        </label>
+                        <group width="1" alignment="center" spacing="16" id="evB-UF-ieE">
+                            <items>
+                                <label alignment="center" text="AQI" id="mlX-6L-Yg0">
+                                    <fontDescription key="font" type="system" pointSize="25"/>
+                                </label>
+                                <label alignment="center" text="Level" id="2na-Ij-fyr">
+                                    <fontDescription key="font" type="system" pointSize="25"/>
+                                </label>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                            <variation key="default">
+                                <mask key="items">
+                                    <exclude reference="mlX-6L-Yg0"/>
+                                    <exclude reference="2na-Ij-fyr"/>
+                                </mask>
+                            </variation>
+                            <variation key="device=watch42mm">
+                                <mask key="items">
+                                    <include reference="mlX-6L-Yg0"/>
+                                    <include reference="2na-Ij-fyr"/>
+                                </mask>
+                            </variation>
+                        </group>
+                        <label alignment="center" verticalAlignment="bottom" text="建议" id="rPD-ny-7lZ"/>
+                    </items>
+                    <variation key="default">
+                        <mask key="items">
+                            <exclude reference="r6i-N1-2vc"/>
+                            <exclude reference="evB-UF-ieE"/>
+                            <exclude reference="rPD-ny-7lZ"/>
+                        </mask>
+                    </variation>
+                    <variation key="device=watch42mm">
+                        <mask key="items">
+                            <include reference="r6i-N1-2vc"/>
+                            <include reference="evB-UF-ieE"/>
+                            <include reference="rPD-ny-7lZ"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <outlet property="gpBJ" destination="evB-UF-ieE" id="6Qy-Kg-5Nz"/>
+                        <outlet property="labelAQIBJ" destination="mlX-6L-Yg0" id="U3D-EF-Jsc"/>
+                        <outlet property="labelBJ" destination="r6i-N1-2vc" id="biM-Gd-CTg"/>
+                        <outlet property="labelLevelBJ" destination="2na-Ij-fyr" id="0I3-ml-ODw"/>
+                        <outlet property="labelsgBJ" destination="rPD-ny-7lZ" id="Gwu-Gg-gxV"/>
+                        <segue destination="opp-9V-QUG" kind="relationship" relationship="nextPage" id="e1y-mX-EAE"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="197.02564102564105" y="365.71794871794873"/>
+        </scene>
+        <!--空气质量-->
+        <scene sceneID="dQm-qX-MQt">
+            <objects>
+                <controller title="空气质量" id="opp-9V-QUG" customClass="InterfaceController" customModule="WatchWeather_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="武汉" id="2qG-UX-46x">
+                            <fontDescription key="font" type="system" pointSize="30"/>
+                        </label>
+                        <group width="1" alignment="center" spacing="16" id="Y5D-qP-hb0">
+                            <items>
+                                <label alignment="center" text="AQI" id="Dd1-uw-X1c">
+                                    <fontDescription key="font" type="system" pointSize="25"/>
+                                </label>
+                                <label alignment="center" text="Level" id="ETX-11-7Tg">
+                                    <fontDescription key="font" type="system" pointSize="25"/>
+                                </label>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                            <variation key="default">
+                                <mask key="items">
+                                    <exclude reference="Dd1-uw-X1c"/>
+                                    <exclude reference="ETX-11-7Tg"/>
+                                </mask>
+                            </variation>
+                            <variation key="device=watch42mm">
+                                <mask key="items">
+                                    <include reference="Dd1-uw-X1c"/>
+                                    <include reference="ETX-11-7Tg"/>
+                                </mask>
+                            </variation>
+                        </group>
+                        <label alignment="center" verticalAlignment="bottom" text="建议" id="1ay-Hl-gBC"/>
+                    </items>
+                    <variation key="default">
+                        <mask key="items">
+                            <exclude reference="2qG-UX-46x"/>
+                            <exclude reference="Y5D-qP-hb0"/>
+                            <exclude reference="1ay-Hl-gBC"/>
+                        </mask>
+                    </variation>
+                    <variation key="device=watch42mm">
+                        <mask key="items">
+                            <include reference="2qG-UX-46x"/>
+                            <include reference="Y5D-qP-hb0"/>
+                            <include reference="1ay-Hl-gBC"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <outlet property="gpWH" destination="Y5D-qP-hb0" id="p2J-aE-ruD"/>
+                        <outlet property="labelAQIWH" destination="Dd1-uw-X1c" id="j8a-zE-DrS"/>
+                        <outlet property="labelLevelWH" destination="ETX-11-7Tg" id="d7c-HQ-yv3"/>
+                        <outlet property="labelWH" destination="2qG-UX-46x" id="5G7-F8-rLG"/>
+                        <outlet property="labelsgWH" destination="1ay-Hl-gBC" id="lHA-0X-9Gv"/>
+                        <segue destination="py4-wm-ofm" kind="relationship" relationship="nextPage" id="86j-sT-Yzf"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="375.74358974358978" y="365.71794871794873"/>
+        </scene>
+        <!--空气质量-->
+        <scene sceneID="gwu-at-g8j">
+            <objects>
+                <controller title="空气质量" id="py4-wm-ofm" customClass="InterfaceController" customModule="WatchWeather_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="城市" id="f0w-e6-VIB">
+                            <fontDescription key="font" type="system" pointSize="30"/>
+                            <variation key="device=watch42mm" text="深圳"/>
+                        </label>
+                        <group width="1" alignment="center" spacing="16" id="fJU-CY-1ux">
+                            <items>
+                                <label alignment="center" text="AQI" id="ypi-Gf-Wd1">
+                                    <fontDescription key="font" type="system" pointSize="25"/>
+                                </label>
+                                <label alignment="center" text="Level" id="miq-tp-fF9">
+                                    <fontDescription key="font" type="system" pointSize="25"/>
+                                </label>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                            <variation key="default">
+                                <mask key="items">
+                                    <exclude reference="ypi-Gf-Wd1"/>
+                                    <exclude reference="miq-tp-fF9"/>
+                                </mask>
+                            </variation>
+                            <variation key="device=watch42mm">
+                                <mask key="items">
+                                    <include reference="ypi-Gf-Wd1"/>
+                                    <include reference="miq-tp-fF9"/>
+                                </mask>
+                            </variation>
+                        </group>
+                        <label alignment="center" verticalAlignment="bottom" text="建议" id="r7L-rP-Gi9"/>
+                    </items>
+                    <variation key="default">
+                        <mask key="items">
+                            <exclude reference="f0w-e6-VIB"/>
+                            <exclude reference="fJU-CY-1ux"/>
+                            <exclude reference="r7L-rP-Gi9"/>
+                        </mask>
+                    </variation>
+                    <variation key="device=watch42mm">
+                        <mask key="items">
+                            <include reference="f0w-e6-VIB"/>
+                            <include reference="fJU-CY-1ux"/>
+                            <include reference="r7L-rP-Gi9"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <outlet property="gpSZ" destination="fJU-CY-1ux" id="fgP-sh-N5y"/>
+                        <outlet property="labelAQISZ" destination="ypi-Gf-Wd1" id="kH3-ga-B90"/>
+                        <outlet property="labelLevelSZ" destination="miq-tp-fF9" id="jXJ-Wc-mWV"/>
+                        <outlet property="labelSZ" destination="f0w-e6-VIB" id="pSY-Gr-Chl"/>
+                        <outlet property="labelsgSZ" destination="r7L-rP-Gi9" id="iSr-2P-29l"/>
+                        <segue destination="tRI-Hx-4gw" kind="relationship" relationship="nextPage" id="lOz-et-xcS"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="564.0512820512821" y="365.71794871794873"/>
+        </scene>
+        <!--空气质量-->
+        <scene sceneID="Hdc-Nu-gxC">
+            <objects>
+                <controller title="空气质量" id="tRI-Hx-4gw" customClass="InterfaceController" customModule="WatchWeather_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="城市" id="Fz7-9V-Bct">
+                            <fontDescription key="font" type="system" pointSize="30"/>
+                            <variation key="device=watch42mm" text="长沙"/>
+                        </label>
+                        <group width="1" alignment="center" spacing="16" id="wUs-Yh-LIx">
+                            <items>
+                                <label alignment="center" text="AQI" id="oB3-ah-Jyq">
+                                    <fontDescription key="font" type="system" pointSize="25"/>
+                                </label>
+                                <label alignment="center" text="Level" id="pmJ-Vf-fdP">
+                                    <fontDescription key="font" type="system" pointSize="25"/>
+                                </label>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                            <variation key="default">
+                                <mask key="items">
+                                    <exclude reference="oB3-ah-Jyq"/>
+                                    <exclude reference="pmJ-Vf-fdP"/>
+                                </mask>
+                            </variation>
+                            <variation key="device=watch42mm">
+                                <mask key="items">
+                                    <include reference="oB3-ah-Jyq"/>
+                                    <include reference="pmJ-Vf-fdP"/>
+                                </mask>
+                            </variation>
+                        </group>
+                        <label alignment="center" verticalAlignment="bottom" text="建议" id="ORQ-lB-zyo"/>
+                    </items>
+                    <variation key="default">
+                        <mask key="items">
+                            <exclude reference="Fz7-9V-Bct"/>
+                            <exclude reference="wUs-Yh-LIx"/>
+                            <exclude reference="ORQ-lB-zyo"/>
+                        </mask>
+                    </variation>
+                    <variation key="device=watch42mm">
+                        <mask key="items">
+                            <include reference="Fz7-9V-Bct"/>
+                            <include reference="wUs-Yh-LIx"/>
+                            <include reference="ORQ-lB-zyo"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <outlet property="gpCS" destination="wUs-Yh-LIx" id="oSf-EQ-P3P"/>
+                        <outlet property="labelAQICS" destination="oB3-ah-Jyq" id="mf0-EN-pA7"/>
+                        <outlet property="labelCS" destination="Fz7-9V-Bct" id="hyj-Dc-aUj"/>
+                        <outlet property="labelLevelCS" destination="pmJ-Vf-fdP" id="D4F-sX-sbE"/>
+                        <outlet property="labelsgCS" destination="ORQ-lB-zyo" id="e0O-9T-nMW"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="734.0512820512821" y="365.71794871794873"/>
+        </scene>
+    </scenes>
+</document>
